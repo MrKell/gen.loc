@@ -14,6 +14,8 @@
 <h2>API</h2>
 <ul>
     <li>Запрос методом POST на http://gen.loc/frontend/web/index.php?r=api</li>
+    <li>Ожидается JSON вида<br>
+        { "firstName": "Иван",  "lastName": "Иванов",  "phoneNumbers": ["812 123-1234",  "916 123-4567"  ]} </li>
     <li>Набирается очередь в Redis когда очедь больше максимума - пишется в базу</li>
     <li>За размер очереди отвечает свойство $redis_max в frontend\modules\api\controllers\DefaultController.php</li>
 </ul>
