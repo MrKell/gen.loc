@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'Phones',
                 'value' => function($data) {
-                    $phones = \app\models\Phones::find()->where(['user_id' => $data->id])->all();
+                    $phones =  $data->phones;
                     $return ="";
                     foreach ($phones as $phone){
                         $return .= $phone['phone'].'<br>';
@@ -35,6 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 },
                 'format' => 'raw',
+
             ],
 
         ],
